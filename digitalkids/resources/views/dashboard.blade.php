@@ -1,4 +1,3 @@
-@extends('layouts.app')
 
 @section('content')
 <div class="container">
@@ -7,6 +6,6 @@
     <p>Pontuação: {{ Auth::user()->score }}</p>
 
     <h2>Seus Cursos</h2>
-   
+
 </div>
 @endsection

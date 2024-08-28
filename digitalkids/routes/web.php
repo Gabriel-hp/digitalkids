@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\CourseController;
 
-
+Route::get('/courses', [CourseController::class, 'welcome'])->name('courses.welcome');
+Route::get('/courses/{id}', [CourseController::class, 'show'])->name('courses.show');
 Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard')->middleware('auth');
 
 
